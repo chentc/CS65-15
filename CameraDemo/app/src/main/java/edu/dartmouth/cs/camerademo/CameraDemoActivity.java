@@ -11,7 +11,7 @@ import android.provider.MediaStore;
 import java.io.File;
 
 public class CameraDemoActivity extends Activity {
-    private static final int CONTENT_REQUEST=1337;
+    private static final int CONTENT_REQUEST=111;
     private File output=null;
 
     @Override
@@ -22,7 +22,7 @@ public class CameraDemoActivity extends Activity {
         File dir=
                 Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM);
 
-        output=new File(dir, "CameraContentDemo.jpeg");
+        output=new File(dir, "CameraDemo.jpeg");
         i.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(output));
 
         startActivityForResult(i, CONTENT_REQUEST);
